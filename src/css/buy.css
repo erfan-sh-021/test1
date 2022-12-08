@@ -1,0 +1,64 @@
+.orderButton>button{
+    border: none;
+    padding: 3px 15px;
+    background: rgb(5,192,230);
+    background: linear-gradient(125deg, rgba(5,192,230,1) 0%, rgba(230,5,208,1) 87%);
+    border-radius: 10px;
+    color:white;
+    /* font-weight: bold; */
+    /* font-size: 20px; */
+}
+.errorMessage{
+
+    background: rgb(87 34 225 / 42%);;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.8px);
+    -webkit-backdrop-filter: blur(10.8px);
+    border: 1px solid rgba(99, 72, 170, 0.36);
+    z-index: 5;
+    width: 500px;
+    height: 200px;
+    position: relative;
+    bottom: -4rem;
+    right: 46rem;
+
+}
+.TopCard{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 25px;
+}
+.topCard>h4{
+    font-size: 19px !important;
+    text-align: center;
+    margin-top: 28px;
+}
+.bottomCard{
+    margin-top: 79px;
+    display: flex;
+    justify-content: space-around;
+}
+.bottomCard>button{
+    width: 120px;
+    height: 40px;
+    border-radius: 25px;
+}
+.orderButton{
+    margin-left: 15rem;
+    position: relative;
+    top: 584px;
+}
+#Cancel{
+    background-color: black;
+    color:white
+}
+#Confirm{
+    background: rgb(5,192,230);
+    background: linear-gradient(125deg, rgba(5,192,230,1) 0%, rgba(230,5,208,1) 87%);
+    color: white;
+}
+.count>button{
+    height: 27px;
+    width: 25px;
+}

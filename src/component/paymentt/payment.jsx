@@ -1,7 +1,9 @@
-import '../css/payment.css';
+import '../../css/payment.css';
+import Buy from './buy';
+import FoodList from './foodList';
 
-const Payment = () => {
-
+const Payment = ({props}) => {
+// console.log(props)
     return (
         <>
             <h3>Final bill</h3>
@@ -13,19 +15,12 @@ const Payment = () => {
                         <th scope="col">Handle</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Food 01</td>
-                        <td className='count'><button>+</button><span>1</span><button>-</button></td>
-                        <td>$23.20</td>
-                    </tr>
-
-                </tbody>
+                <FoodList />
             </table>
             <div className="bottom">
                 <span>total Price:</span>
-                <button>order</button>
             </div>
+                <Buy/>
         </>
     );
 }

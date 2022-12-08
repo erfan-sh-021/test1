@@ -10,33 +10,39 @@ h3{
 }
 
 .count>span{
-    margin: 0 3px;
+    margin: 0 8px;
 }
 .count>button{
 background: rgb(5,192,230);
 background: linear-gradient(125deg, rgba(5,192,230,1) 0%, rgba(230,5,208,1) 87%);
 color: white;
-height: 30px;
-width: 30px;
+
 border-radius: 50%;
 border: none;
 }
 .bottom{
-    display: flex;
+    
     flex-wrap: nowrap;
-    justify-content: space-around;
     position: relative;
     top: 610px;
+    display: inline;
+    margin-left: 10px;
+}
+.button{
+    margin-left: 14rem;
+    position: relative;
+    top: 587px;
 }
 .bottom>span{
    color:white;
+   margin-left: 5x;
 }
 
-.bottom>button{
+/* .bottom>button{
     border: none;
     padding: 3px 15px;
     background: rgb(5,192,230);
     background: linear-gradient(125deg, rgba(5,192,230,1) 0%, rgba(230,5,208,1) 87%);
     border-radius: 10px;
     color:white;
-}
+} */

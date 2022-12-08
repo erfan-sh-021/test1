@@ -1,12 +1,17 @@
+.active{
+    display: inline;
+}
+.deactive{
+    display: none;
+}
 .row{
-    max-width: 1631px !important;
-    margin: 0 auto !important;
+    margin: 0 19px!important;
 }
 .card{
-    height: 203px !important;
+    height: 181px  !important;
     border:none;
 }
-.card:hover{
+.hover{
     background: rgb(5,192,230);
     background: linear-gradient(125deg, rgba(5,192,230,1) 0%, rgba(230,5,208,1) 87%);
     border:none;
@@ -20,12 +25,12 @@
     height: 68px;
 }
 .cardBottom{
-    margin-top: 36px;
+    margin-top: 13px;
 }
 .cardBottom>span{
     font-size: 25px;
 }
-.cardBottom>a{
+.cardBottom>button{
     margin-left: 136px;
     border-radius: 20px;
     background: rgb(5,192,230);
@@ -41,7 +46,7 @@
 
 .cardLeft{
     float: left;
-    width: 254px;
+    width: 236px;
     margin-top: 15px;
 }
 .cardLeft>p{
@@ -58,5 +63,29 @@
     width: 110px;
     height: 100px;
     margin-top: 17px;
+    margin-right: 17px;
+
     border-radius: 10px;
+}
+.payButton{
+    
+    /* display: inline; */
+    position: relative;
+    bottom: 38px;
+    left: 237px;
+}
+.payButton>button{
+    border: none;
+    border-radius: 25px;
+    width: 33px;
+    height: 35px;
+    background-color: rgb(255, 255, 255);
+    
+}
+.payButton>span{
+    background-color: rgb(255, 255, 255);
+    padding: 5px 23px;
+    text-align: center;
+    border-radius: 16px;
+    margin: 0 6px;
 }

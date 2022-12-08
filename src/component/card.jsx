@@ -1,47 +1,45 @@
-import '../css/card.css';
-import React, { useState } from 'react';
-import axios from 'axios';
+import { useDispatch, useSelector } from "react-redux";
+import { incrementAction, decrementAction } from '../redux/counterSlice';
+const Card = ({ Data }) => {
+    // console.log(Data)
+    const AddButton = document.querySelector('.cardBottom > button');
+    const PayButton = document.querySelector('.payButton ');
+    const Cardd = document.querySelector('.card');
 
+    const dispatch = useDispatch();
+    const value = useSelector(state => state.counter.value);
 
-const Card = (Data) => {
-   
-    // const [data, setData] = useState([]);
+    const hendleClick = () => {
 
-    // axios.get('https://hapi.pardikiot.com/api/MirrorFoods/GetWithCategoryByLanguageAndMealTime/735e364f-1b29-4622-ad24-aaf44e8be7d0/00%3A00%3A00').then((res) => {
-    //     setData(res.data)
-    //     // console.log(res, 'is  response')
-    // }).catch(err => console.log(err, 'is error!'))
-    // const data={data}
-    // console.log(Data.Data[0])
+        AddButton.classList.add('deactive');
+        PayButton.classList.remove('deactive');
+        Cardd.classList.add('hover');
+
+    }
     return (
-
-        <div className="row">
-            {
-                Data.Data.map((post,index) => {
-                    return (
-                        <div className="card " key={index} style={{ width: '25rem', margin: '10px' }}>
-                            <div className="cardTop">
-                                <div className="cardLeft">
-                                    <h5 className="card-title">{post.foods[0].title}</h5>
-                                    <p className="card-text overflow-hidden">{post.foods[0].description}</p>
-                                </div>
-                                <div className="cardRight">
-                                    <img src={post.foods[0].imageUrl} className="card-img-top" alt="..." />
-                                </div>
-                            </div>
-                            <div className="cardBottom">
-                                <span>price: ${post.foods[0].price}</span>
-                                <a href="#" className="btn btn-primary">Add</a>
-                            </div>
-                        </div>
-                    )
-                })
-
-
-            }
-        </div>
-
-    )
+        <>
+            <div className="card " style={{ width: '25rem', margin: '10px' }}>
+                <div className="cardTop">
+                    <div className="cardLeft">
+                        <h5 className="card-title">{Data.foods[0].title}</h5>
+                        <p className="card-text overflow-hidden">{Data.foods[0].description}</p>
+                    </div>
+                    <div className="cardRight">
+                        <img src={Data.foods[0].imageUrl} className="card-img-top" alt="..." />
+                    </div>
+                </div>
+                <div className="cardBottom">
+                    <span>price: ${Data.foods[0].price}</span>
+                    <button onClick={hendleClick} href="#" className="btn btn-primary">Add</button>
+                </div>
+                <div className="payButton deactive">
+                    <button>-</button>
+                    <span>{value}</span>
+                    <button>+</button>
+                </div>
+            </div>
+        </>
+    );
 }
 
 export default Card;
