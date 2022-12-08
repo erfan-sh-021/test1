@@ -1,0 +1,62 @@
+.row{
+    max-width: 1631px !important;
+    margin: 0 auto !important;
+}
+.card{
+    height: 203px !important;
+    border:none;
+}
+.card:hover{
+    background: rgb(5,192,230);
+    background: linear-gradient(125deg, rgba(5,192,230,1) 0%, rgba(230,5,208,1) 87%);
+    border:none;
+   
+}
+.card:hover a{
+    color: black;
+    background: white !important;
+}
+.card-text{
+    height: 68px;
+}
+.cardBottom{
+    margin-top: 36px;
+}
+.cardBottom>span{
+    font-size: 25px;
+}
+.cardBottom>a{
+    margin-left: 136px;
+    border-radius: 20px;
+    background: rgb(5,192,230);
+    background: linear-gradient(125deg, rgba(5,192,230,1) 0%, rgba(230,5,208,1) 87%);
+    border:none;
+    width: 120px;
+    text-align: center;
+}
+/* .cardBottom>a:hover{
+    color: black;
+    background-color: white !important;
+} */
+
+.cardLeft{
+    float: left;
+    width: 254px;
+    margin-top: 15px;
+}
+.cardLeft>p{
+    font-size: 15px;
+}
+.cardLeft>h5{
+    font-size: 20px;
+    font-weight: bold;
+}
+.cardRight{
+    float: right;
+}
+.cardRight>img{
+    width: 110px;
+    height: 100px;
+    margin-top: 17px;
+    border-radius: 10px;
+}

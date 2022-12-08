@@ -1,0 +1,19 @@
+.left{
+  background-color: black;
+  width: 70%;
+}
+.right{
+  width: 30%;
+  min-height: 1175px;
+  background-color: black;
+}
+.parrent{
+  display: flex;
+}
+.payment{
+  margin-top: 90px;
+  border-left: 3px solid white;
+  min-height: 800px;
+  background-color: black;
+  color: white;
+}

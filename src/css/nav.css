@@ -1,0 +1,20 @@
+.navGroup{
+    margin-left: 15px;
+}
+.navGroup>button{
+    width: 11rem;
+    border: none;
+    padding: 6px;
+    border-radius: 16px;
+    font-size: 20px;
+    margin-left: 13px;
+    background: white;
+    color: black;
+    margin-top: 6rem;
+    
+}
+.navGroup>button:hover{
+    background: rgb(5,192,230);
+    background: linear-gradient(125deg, rgba(5,192,230,1) 0%, rgba(230,5,208,1) 87%);
+    color: white;
+}
