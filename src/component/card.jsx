@@ -1,21 +1,27 @@
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { incrementAction, decrementAction } from '../redux/counterSlice';
 const Card = ({ Data }) => {
     // console.log(Data)
-    const AddButton = document.querySelector('.cardBottom > button');
-    const PayButton = document.querySelector('.payButton ');
-    const Cardd = document.querySelector('.card');
+
 
     const dispatch = useDispatch();
     const value = useSelector(state => state.counter.value);
 
-    const hendleClick = () => {
+    useEffect(()=>{
+        const AddButton = document.querySelector('.cardBottom > button');
+        const PayButton = document.querySelector('.payButton ');
+        const Cardd = document.querySelector('.card');
+        const addBtn =document.querySelector('.addBtn');
+        addBtn.addEventListener('click',()=>{
+            AddButton.classList.add('deactive');
+            PayButton.classList.remove('deactive');
+            Cardd.classList.add('hover');
+        })     
+    },[])
+ 
 
-        AddButton.classList.add('deactive');
-        PayButton.classList.remove('deactive');
-        Cardd.classList.add('hover');
-
-    }
+    
     return (
         <>
             <div className="card " style={{ width: '25rem', margin: '10px' }}>
@@ -30,12 +36,12 @@ const Card = ({ Data }) => {
                 </div>
                 <div className="cardBottom">
                     <span>price: ${Data.foods[0].price}</span>
-                    <button onClick={hendleClick} href="#" className="btn btn-primary">Add</button>
+                    <button  className="addBtn btn btn-primary">Add</button>
                 </div>
                 <div className="payButton deactive">
-                    <button>-</button>
+                    <button onClick={()=>dispatch(decrementAction())}>-</button>
                     <span>{value}</span>
-                    <button>+</button>
+                    <button onClick={()=>dispatch(incrementAction())} >+</button>
                 </div>
             </div>
         </>
